@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #120c0a;
+    color: #ede3ce;
+    background-image: 
+      radial-gradient(circle at 50% 0%, rgba(212, 163, 75, 0.08) 0%, transparent 70%),
+      radial-gradient(circle at 80% 100%, rgba(139, 28, 28, 0.06) 0%, transparent 60%);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, .font-marquee {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.04em;
+  }
+
+  .font-editorial {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-ticket {
+    font-family: 'Courier Prime', monospace;
+  }
+}
+
+/* Subtle vintage film projector grain overlay */
+.film-grain {
+  background-image: radial-gradient(rgba(212, 163, 75, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Golden border marquee accent */
+.vintage-border {
+  border: 1px solid rgba(212, 163, 75, 0.28);
+  box-shadow: 0 0 20px rgba(212, 163, 75, 0.05), inset 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.vintage-gold-glow {
+  text-shadow: 0 0 16px rgba(212, 163, 75, 0.35);
+}
+
+/* Ticket cutout styling */
+.ticket-left-cutout {
+  position: relative;
+}
+.ticket-left-cutout::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -12px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background-color: #120c0a;
+  border-radius: 9999px;
+  border-right: 1px solid rgba(212, 163, 75, 0.3);
+}
+.ticket-left-cutout::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -12px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background-color: #120c0a;
+  border-radius: 9999px;
+  border-left: 1px solid rgba(212, 163, 75, 0.3);
+}
+
+@keyframes filmRoll {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-film-roll {
+  animation: filmRoll 12s linear infinite;
+}

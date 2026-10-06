@@ -1,0 +1,6 @@
+{
+  "name": "CineMediador - El Tribunal del Celuloide",
+  "description": "Mediador cinematográfico imparcial para parejas y grupos indecisos. Compara películas, evalúa ritmo y estado de ánimo, y descubre la película de compromiso ideal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
